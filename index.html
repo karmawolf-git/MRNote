@@ -111,6 +111,33 @@
       gap: 20px;
     }
 
+    /* ── Inactive card ── */
+    .card-inactive {
+      opacity: 0.42;
+      filter: grayscale(60%);
+    }
+    .card-inactive:hover {
+      transform: none;
+      box-shadow: none;
+      border-color: var(--card-border);
+    }
+    .card-inactive::before { display: none; }
+    .card-inactive .banner::before {
+      content: 'BETA';
+      position: absolute;
+      top: 12px;
+      left: 14px;
+      background: rgba(0,0,0,0.4);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 20px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.7);
+      padding: 2px 8px;
+      z-index: 2;
+    }
+
     /* ── Card ── */
     .card {
       background: var(--card-bg);
@@ -442,7 +469,7 @@
     </a>
 
     <!-- MaskingRestore -->
-    <a class="card card-mask" href="https://karmawolf-git.github.io/MaskingRestore/" target="_blank" rel="noopener">
+    <a class="card card-mask card-inactive" href="https://karmawolf-git.github.io/MaskingRestore/" target="_blank" rel="noopener">
       <div class="banner">
         <span class="banner-icon">🔐</span>
         <span class="banner-tag">보안</span>
@@ -462,7 +489,7 @@
     </a>
 
     <!-- Netlify app -->
-    <a class="card card-extra" href="https://subtle-dango-ce4f6f.netlify.app/" target="_blank" rel="noopener">
+    <a class="card card-extra card-inactive" href="https://subtle-dango-ce4f6f.netlify.app/" target="_blank" rel="noopener">
       <div class="banner">
         <span class="banner-icon">✅</span>
         <span class="banner-tag">Todo</span>
