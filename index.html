@@ -93,6 +93,31 @@
       line-height: 1.6;
     }
 
+    /* ── Internal badge ── */
+    .internal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 99px;
+      background: rgba(239,68,68,0.1);
+      border: 1px solid rgba(239,68,68,0.35);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #f87171;
+      margin-bottom: 20px;
+    }
+    .internal-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #f87171;
+      box-shadow: 0 0 6px #f87171;
+    }
+
     /* ── Section label ── */
     .section-label {
       font-size: 12px;
@@ -383,6 +408,9 @@
       <span class="logo-text">MR Note</span>
     </div>
     <p>의료 정보와 업무 효율을 높이는 도구들을 한 곳에서 만나보세요.</p>
+    <div style="margin-top:18px;">
+      <span class="internal-badge">Internal Use Only</span>
+    </div>
   </header>
 
   <p class="section-label">모든 서비스</p>
